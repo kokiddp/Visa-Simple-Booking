@@ -1,0 +1,20 @@
+{
+	"name": "visamultimedia3/vsb",
+
+	"description": "Visa Simple Booking",
+
+	"license": ["GPL-2.0-or-later"],
+
+	"authors": [
+		{
+			"name": "Gabriele Coquillard",
+			"email": "gabriele@visamultimedia.com",
+			"homepage": "http://www.visamultimedia.com",
+			"role": "Developer, maintainer"
+		}
+	],
+    
+    "require": {
+		"php" : "^7.1"
+    }
+}

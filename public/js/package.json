@@ -1,0 +1,18 @@
+{
+  "name": "vsb-public",
+  "version": "1.0.0",
+  "description": "Visa Simple Booking",
+  "main": "vsb-public.js",
+  "author": "Gabriele Coquillard",
+  "license": "GPL-2.0-or-later",
+  "dependencies": {
+    "angular": "^1.7.6",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0"
+  },
+  "scripts": {
+    "watch": "watchify src.js -o vsb-public.js -v",
+    "annotate": "ng-annotate -a src.js -o src.js ",
+    "build": "uglifyjs -m -c -o vsb-public.min.js vsb-public.js"
+  }
+}
