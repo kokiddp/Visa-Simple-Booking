@@ -16,7 +16,7 @@
  * Plugin Name:       Visa Simple Booking
  * Plugin URI:        http://www.visamultimedia.com/
  * Description:       This plugin integrates a Simple Booking reservation form.
- * Version:           1.2.2
+ * Version:           1.0.0
  * Author:            VisaMultimedia
  * Author URI:        http://www.visamultimedia.com/
  * License:           GPL-2.0+
