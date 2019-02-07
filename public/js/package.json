@@ -6,7 +6,7 @@
   "author": "Gabriele Coquillard",
   "license": "GPL-2.0-or-later",
   "dependencies": {
-    "angular": "^1.7.6",
+    "angular": "^1.7.7",
     "lodash": "^4.17.11",
     "moment": "^2.24.0"
   },
