@@ -1,7 +1,7 @@
 === Plugin Name ===
 Contributors: elklab
 Donate link: https://www.elk-lab.com
-Tags: reservation verticalbooking hotel
+Tags: reservation simplebooking hotel
 Requires at least: 3.0.1
 Tested up to: 5.0.3
 Stable tag: 5.0
