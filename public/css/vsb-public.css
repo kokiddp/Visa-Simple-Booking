@@ -101,7 +101,7 @@
 #vsb .vsb_rooms
 {
     clear: both;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 #vsb .vsb_rooms .vsb_room
 {
@@ -179,11 +179,17 @@
     margin-bottom: 10px;
 }
 
+#vsb .vsb_coupon
+{
+    clear: both;
+    width: 50%;
+    margin-bottom: 40px;
+}
 #vsb .vsb_coupon input[type=text]
 {
     font-size: 18px;
     line-height: 30px;
-    width: 250px;
+    width: 100%;
     padding: 8px;
     border: 1px solid #666;
     -webkit-border-radius: 0;
@@ -193,6 +199,8 @@
 
 #vsb .vsb_submit
 {
+    clear: both;
+    width: 100%;
     margin-bottom: 30px;
 }
 #vsb .vsb_submit input[type=submit]
