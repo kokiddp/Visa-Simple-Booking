@@ -179,6 +179,18 @@
     margin-bottom: 10px;
 }
 
+#vsb .vsb_coupon input[type=text]
+{
+    font-size: 18px;
+    line-height: 30px;
+    width: 250px;
+    padding: 8px;
+    border: 1px solid #666;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
 #vsb .vsb_submit
 {
     margin-bottom: 30px;
@@ -232,188 +244,5 @@
         width: -webkit-calc((100% / 2) - 5px);
         width: -moz-calc((100% / 2) - 5px);
         width: calc((100% / 2) - 5px);
-    }
-}
-
-#vsb.miniform label
-{
-    float: left;
-    font-size: 14px;
-    line-height: 35px;
-    margin-right: 10px;
-}
-#vsb.miniform label.validation-error{
-    float: none;
-}
-#vsb.miniform .vsb_dates
-{
-    width: -webkit-calc(((100% - 40px) / 5) * 3);
-    width: -moz-calc(((100% - 40px) / 5) * 3);
-    width: -webkit-calc(-webkit-calc(-webkit-calc(100% - 40px) / 5) * 3);
-    width: -moz-calc(-moz-calc(-moz-calc(100% - 40px) / 5) * 3);
-    width: calc(calc(calc(100% - 40px) / 5) * 3);
-    width: calc(((100% - 40px) / 5) * 3);
-    margin-bottom: 0;
-    margin-right: 20px;
-}
-#vsb.miniform .vsb_dates .vsb_date
-{
-    float: left;
-    width: -webkit-calc(50% - 20px);
-    width: -moz-calc(50% - 20px);
-    width: calc(50% - 20px);
-}
-#vsb.miniform .vsb_dates .vsb_date input[type=date]
-{
-    font-size: 14px;
-    line-height: 14px;
-    padding: 6px;
-    width: -webkit-calc(50% - 10px);
-    width: -moz-calc(50% - 10px);
-    width: calc(50% - 10px);
-}
-
-#vsb.miniform .vsb_rooms_controls
-{
-    width: -webkit-calc(-webkit-calc(100% - 40px) / 5);
-    width: -moz-calc(-moz-calc(100% - 40px) / 5);
-    width: calc(calc(100% - 40px) / 5);
-    width: -webkit-calc((100% - 40px) / 5);
-    width: -moz-calc((100% - 40px) / 5);
-    width: calc((100% - 40px) / 5);
-    margin-bottom: 0;
-    margin-right: 20px;
-}
-#vsb.miniform .vsb_rooms_controls input[type=number]
-{
-    font-size: 14px;
-    line-height: 14px;
-    width: 3em;
-    padding: 8px;
-    margin-right: 0;
-}
-#vsb.miniform .vsb_rooms_controls input[type=button]
-{
-    font-size: 14px;
-    line-height: 14px;
-    padding: 10px 1em!important;
-    margin-right: 0;
-}
-
-#vsb.miniform .vsb_submit
-{
-    clear: none;
-    float:left;
-    width: -webkit-calc(-webkit-calc(100% - 40px) / 5);
-    width: -moz-calc(-moz-calc(100% - 40px) / 5);
-    width: calc(calc(100% - 40px) / 5);
-    width: -webkit-calc((100% - 40px) / 5);
-    width: -moz-calc((100% - 40px) / 5);
-    width: calc((100% - 40px) / 5);
-    margin-bottom: 0;
-    margin-right: 0;
-}
-#vsb.miniform .vsb_submit input[type=submit]
-{
-    font-size: 14px;
-    line-height: 14px;
-    padding: 10px 1em!important;
-}
-
-@media (max-width:1280px) and (min-width: 981px)
-{
-    #vsb.miniform .vsb_dates
-    {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-    #vsb.miniform .vsb_rooms_controls,
-    #vsb.miniform .vsb_submit
-    {
-        width: -webkit-calc(50% - 20px);
-        width: -moz-calc(50% - 20px);
-        width: calc(50% - 20px);
-        margin-right: 20px;
-    }
-    #vsb.miniform .vsb_submit
-    {
-        margin-right: 0;
-    }
-}
-@media (max-width:980px) and (min-width: 481px)
-{
-    #vsb.miniform .vsb_dates
-    {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 0;
-    }
-    #vsb.miniform .vsb_rooms_controls,
-    #vsb.miniform .vsb_submit
-    {
-        width: -webkit-calc(50% - 20px);
-        width: -moz-calc(50% - 20px);
-        width: calc(50% - 20px);
-        margin-right: 20px;
-    }
-    #vsb.miniform label
-    {
-        float: none;
-        margin-right: 0;
-        margin-bottom: 5px;
-    }
-    #vsb.miniform .vsb_dates .vsb_date
-    {
-        width: 100%;
-    }
-    #vsb.miniform .vsb_dates .vsb_date input[type=date]
-    {
-        width: 100%;
-    }
-    #vsb.miniform .vsb_submit
-    {
-        margin-top: 40px;
-    }
-}
-@media (max-width:480px)
-{
-    #vsb.miniform .vsb_dates
-    {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 0;
-    }
-    #vsb.miniform .vsb_rooms_controls
-    {
-        width: -webkit-calc(70% - 20px);
-        width: -moz-calc(70% - 20px);
-        width: calc(70% - 20px);
-        margin-right: 20px;
-    }
-    #vsb.miniform .vsb_submit
-    {
-        width: -webkit-calc(30% - 20px);
-        width: -moz-calc(30% - 20px);
-        width: calc(30% - 20px);
-        margin-right: 0;
-    }
-    #vsb.miniform label
-    {
-        float: none;
-        margin-right: 0;
-        margin-bottom: 5px;
-    }
-    #vsb.miniform .vsb_dates .vsb_date
-    {
-        width: 100%;
-    }
-    #vsb.miniform .vsb_dates .vsb_date input[type=date]
-    {
-        width: 100%;
-    }
-    #vsb.miniform .vsb_submit
-    {
-        margin-top: 40px;
     }
 }
