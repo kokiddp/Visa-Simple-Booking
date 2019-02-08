@@ -120,8 +120,8 @@ var _ = require('lodash');
                 $scope.internal.queryString = _.reduce($scope.submit, function(result, value, key) { return (!_.isNull(value) && !_.isUndefined(value)) ? (result += key + '=' + value + '&') : result; }, '').slice(0, -1);
                 $window.open($scope.internal.url+'?'+$scope.internal.queryString);
             }
-        
-    }]);
+        }
+    ]);
     
     app.filter('range', function() {
         return function(input, min, max) {

@@ -130,7 +130,7 @@ msgstr ""
 #: public/class-vsb-public-shortcodes.php:129
 #: public/class-vsb-public-shortcodes.php:134
 msgid ""
-"There is at least one error in your request. Please correct check the form "
+"There is at least one error in your request. Please check the form "
 "before submitting."
 msgstr ""
 

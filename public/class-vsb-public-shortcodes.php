@@ -126,12 +126,11 @@ class Vsb_Public_Shortcodes {
 				<div class="vsb_coupon clearfix">
 					<label><?= __( 'Coupon', 'visa-simple-booking' ) ?>{{y}}</label>
 					<input type="text" name="coupon" ng-model="submit.coupon" />
-					<label class="validation-error" ng-if="vsbForm.$invalid"><?= __( 'There is at least one error in your request. Please correct check the form before submitting.', 'visa-simple-booking' ) ?></label>
 				</div>
 
 				<div class="vsb_submit clearfix">
 					<input type="submit" ng-click="submitForm()" ng-disabled="vsbForm.$invalid" value="<?= __( 'Submit', 'visa-simple-booking' ) ?>" />
-					<label class="validation-error" ng-if="vsbForm.$invalid"><?= __( 'There is at least one error in your request. Please correct check the form before submitting.', 'visa-simple-booking' ) ?></label>
+					<label class="validation-error" ng-if="vsbForm.$invalid"><?= __( 'There is at least one error in your request. Please check the form before submitting.', 'visa-simple-booking' ) ?></label>
 				</div>
 			</form>
 
