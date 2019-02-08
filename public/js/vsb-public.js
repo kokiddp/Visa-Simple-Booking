@@ -58322,9 +58322,9 @@ var _ = require('lodash');
             $scope.submitForm = function(){
                 $scope.submit.guests = '';
                 _.forEach($scope.form.rooms, function(room){
-                    _.forEach(room.adulti, function(){
-                        $scope.submit.guests += 'A,';
-                    });
+                    for (i = 0; i < room.adulti; i++) {
+                        $scope.submit.guests += 'A,';                        
+                    }
                     _.forEach($scope.form.ages, function(value, key){                        
                         _.forEach(value, function(value2, key2){
                             if ( key == room.id ) {
