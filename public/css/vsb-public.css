@@ -253,4 +253,8 @@
         width: -moz-calc((100% / 2) - 5px);
         width: calc((100% / 2) - 5px);
     }
+    #vsb .vsb_coupon
+    {
+        width: 100%;
+    }
 }
