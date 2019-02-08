@@ -62,51 +62,25 @@ var _ = require('lodash');
             }
 
             $scope.submit = {
-                id_albergo: '',
-                id_stile: '',
-                dc: '',
-                tot_adulti: 0,
-                tot_bambini: 0,
-                notti_1: 1,
-                tot_camere: 1,
-                lingua_int: 'ita',
+                hid: '',
+                lang: 'IT',
+                guests: '',
+                in: moment(new Date()).startOf('day').format('YYYY-M-D'),
+                out: moment(new Date()).startOf('day').add(parseInt($scope.internal.minNights), 'd').format('YYYY-M-D'),
+                coupon: '',
             }
-
-            $scope.$watch("form.rooms", function(){
-                $scope.submit.tot_camere = $scope.form.rooms.length;
-                $scope.submit.tot_adulti = _.sumBy($scope.form.rooms, function(r) { return r.adulti; });
-                $scope.submit.tot_bambini = _.sumBy($scope.form.rooms, function(r) { return r.bambini; });
-                _.forEach($scope.form.rooms, function(value){
-                    _.set($scope.submit, 'adulti' + value.id, value.adulti);
-                    _.set($scope.submit, 'bambini' + value.id, value.bambini);
-                });
-            }, true);
-
-            $scope.$watch("form.ages", function(){
-                _.forEach($scope.form.ages, function(value, key){
-                    _.forEach(value, function(value2, key2){
-                        _.set($scope.submit, 'st' + key + 'bamb' + key2, value2);
-                    });
-                });
-            }, true);
 
             $scope.$watch("form.arrivalDate", function(){
                 $scope.internal.arrival = moment($scope.form.arrivalDate).startOf('day');
                 $scope.internal.depart = moment($scope.form.departDate).startOf('day');
                 $scope.internal.minDepartDate = moment($scope.internal.arrival.toDate()).add(parseInt($scope.internal.minNights), 'd').toDate();
-                $scope.submit.gg = $scope.internal.arrival.format('D');
-                $scope.submit.mm = $scope.internal.arrival.format('M');
-                $scope.submit.aa = $scope.internal.arrival.format('YYYY');
-                $scope.submit.notti_1 = $scope.internal.depart.diff($scope.internal.arrival, 'days');
+                $scope.submit.in = $scope.internal.arrival.format('YYYY-M-D');
             }, true);
 
             $scope.$watch("form.departDate", function(){
                 $scope.internal.arrival = moment($scope.form.arrivalDate).startOf('day');
                 $scope.internal.depart = moment($scope.form.departDate).startOf('day');
-                $scope.submit.ggf = $scope.internal.depart.format('D');
-                $scope.submit.mmf = $scope.internal.depart.format('M');
-                $scope.submit.aaf = $scope.internal.depart.format('YYYY');
-                $scope.submit.notti_1 = $scope.internal.depart.diff($scope.internal.arrival, 'days');
+                $scope.submit.out = $scope.internal.depart.format('YYYY-M-D');
             }, true);
 
             $scope.addRoom = function(){
@@ -126,6 +100,23 @@ var _ = require('lodash');
             }
 
             $scope.submitForm = function(){
+                $scope.submit.guests = '';
+                _.forEach($scope.form.rooms, function(room){
+                    _.forEach(room.adulti, function(){
+                        $scope.submit.guests += 'A,';
+                    });
+                    _.forEach($scope.form.ages, function(value, key){                        
+                        _.forEach(value, function(value2, key2){
+                            if ( key == room.id ) {
+                                $scope.submit.guests += value2 + ',';
+                            }
+                        });
+                    });
+                    $scope.submit.guests = $scope.submit.guests.substring(0, $scope.submit.guests.length - 1);
+                    $scope.submit.guests += '|';
+                });
+                $scope.submit.guests = $scope.submit.guests.substring(0, $scope.submit.guests.length - 1);
+
                 $scope.internal.queryString = _.reduce($scope.submit, function(result, value, key) { return (!_.isNull(value) && !_.isUndefined(value)) ? (result += key + '=' + value + '&') : result; }, '').slice(0, -1);
                 $window.open($scope.internal.url+'?'+$scope.internal.queryString);
             }

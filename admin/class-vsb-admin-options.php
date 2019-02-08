@@ -65,9 +65,7 @@ class Vsb_Admin_Options {
 		
 		add_settings_section( 'vsb_main', __('Main Settings', 'visa-simple-booking'), array( $this, 'vsb_main_section_text' ), 'vsb' );
 		add_settings_field( 'vsb_url', __('URL base', 'visa-simple-booking'), array( $this, 'vsb_setting_url'), 'vsb', 'vsb_main' );
-		add_settings_field( 'vsb_id_albergo', __('ID Albergo', 'visa-simple-booking'), array( $this, 'vsb_setting_id_albergo'), 'vsb', 'vsb_main' );
-		add_settings_field( 'vsb_id_stile', __('ID Stile', 'visa-simple-booking'), array( $this, 'vsb_setting_id_stile'), 'vsb', 'vsb_main' );
-		add_settings_field( 'vsb_dc', __('DC', 'visa-simple-booking'), array( $this, 'vsb_setting_dc'), 'vsb', 'vsb_main' );
+		add_settings_field( 'vsb_hid', __('HID', 'visa-simple-booking'), array( $this, 'vsb_setting_hid'), 'vsb', 'vsb_main' );
 
 		add_settings_section( 'vsb_config', __('Configuration Settings', 'visa-simple-booking'), array( $this, 'vsb_config_section_text' ), 'vsb' );
 		add_settings_field( 'vsb_min_nights', __('Minimum nights stay', 'visa-simple-booking'), array( $this, 'vsb_setting_min_nights'), 'vsb', 'vsb_config' );
@@ -102,26 +100,8 @@ class Vsb_Admin_Options {
 	 *
 	 * @return void
 	 */
-	public function vsb_setting_id_albergo() {
-		echo "<input type='text' id='vsb_id_albergo' name='vsb_options[id_albergo]' value='{$this->options['id_albergo']}' />";
-	}
-
-	/**
-	 * Undocumented function
-	 *
-	 * @return void
-	 */
-	public function vsb_setting_id_stile() {
-		echo "<input type='text' id='vsb_id_stile' name='vsb_options[id_stile]' value='{$this->options['id_stile']}' />";
-	}
-
-	/**
-	 * Undocumented function
-	 *
-	 * @return void
-	 */
-	public function vsb_setting_dc() {
-		echo "<input type='text' id='vsb_dc' name='vsb_options[dc]' value='{$this->options['dc']}' />";
+	public function vsb_setting_hid() {
+		echo "<input type='text' id='vsb_hid' name='vsb_options[hid]' value='{$this->options['hid']}' />";
 	}
 
 	/**

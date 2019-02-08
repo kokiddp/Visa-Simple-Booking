@@ -66,7 +66,17 @@ class Vsb_Public_Shortcodes {
 		ob_start();
 		?>
 
-		<div id="vsb" class="clearfix" ng-app="vsb" ng-controller="vsbController" ng-init="internal.url='<?= $this->options['url'] ?>';submit.id_albergo=<?= $this->options['id_albergo'] ?>;submit.id_stile=<?= $this->options['id_stile'] ?>;submit.dc=<?= $this->options['dc'] ?>;internal.minNights=<?= $this->options['min_nights'] ?>;internal.maxRooms=<?= $this->options['max_rooms'] ?>;internal.maxPeople=<?= $this->options['max_people'] ?>;internal.defaultAdults=<?= $this->options['default_adults'] ?>;internal.minAdultsFirstRoom=<?= $this->options['min_adults_first_room'] ?>;internal.minAdultsOtherRooms=<?= $this->options['min_adults_other_rooms'] ?>;internal.maxAgeChildren=<?= $this->options['max_age_children'] ?>;" ng-cloak ng-strict-di>
+		<div id="vsb" class="clearfix" ng-app="vsb" ng-controller="vsbController" ng-init="
+			internal.url='<?= $this->options['url'] ?>';
+			submit.hid=<?= $this->options['hid'] ?>;
+			internal.minNights=<?= $this->options['min_nights'] ?>;
+			internal.maxRooms=<?= $this->options['max_rooms'] ?>;
+			internal.maxPeople=<?= $this->options['max_people'] ?>;
+			internal.defaultAdults=<?= $this->options['default_adults'] ?>;
+			internal.minAdultsFirstRoom=<?= $this->options['min_adults_first_room'] ?>;
+			internal.minAdultsOtherRooms=<?= $this->options['min_adults_other_rooms'] ?>;
+			internal.maxAgeChildren=<?= $this->options['max_age_children'] ?>;
+		" ng-cloak ng-strict-di>
 
 			<form name="vsbForm" novalidate>
 
@@ -111,6 +121,11 @@ class Vsb_Public_Shortcodes {
 							</div>
 						</div>
 					</div>
+				</div>
+
+				<div class="vsb_coupon clearfix">
+					<input type="text" name="coupon" ng-model="submit.coupon" ?>" />
+					<label class="validation-error" ng-if="vsbForm.$invalid"><?= __( 'There is at least one error in your request. Please correct check the form before submitting.', 'visa-simple-booking' ) ?></label>
 				</div>
 
 				<div class="vsb_submit clearfix">
