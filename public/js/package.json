@@ -10,6 +10,11 @@
     "lodash": "^4.17.11",
     "moment": "^2.24.0"
   },
+  "devDependencies": {
+    "ng-annotate": "^1.2.2",
+    "uglify-js": "^3.4.9",
+    "watchify": "^3.11.1"
+  },
   "scripts": {
     "watch": "watchify src.js -o vsb-public.js -v",
     "annotate": "ng-annotate -a src.js -o src.js ",

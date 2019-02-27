@@ -1,25 +1,6 @@
-### VisualStudioCode ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-
-### Windows ###
-# Windows thumbnail cache files
-Thumbs.db
-ehthumbs.db
-ehthumbs_vista.db
-
-# Folder config file
-[Dd]esktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-### Composer ###
 composer.lock
 
-### JS ###
-public/js/node_modules
-public/js/pckage-lock.json
+node_modules
+
+/public/js/node_modules
+/public/js/package-lock.json
